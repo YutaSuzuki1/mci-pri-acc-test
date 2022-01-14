@@ -21,6 +21,7 @@ ARG wkdir=/home/work
 # echo "username:password" | chpasswd
 # root password is "p@ssw0rd"
 
+
 RUN echo "root:p@ssw0rd" | chpasswd && \
     adduser --disabled-password --gecos "" "${username}" && \
     echo "${username}:${username}" | chpasswd && \
